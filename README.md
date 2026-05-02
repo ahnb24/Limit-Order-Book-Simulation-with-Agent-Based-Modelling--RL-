@@ -1,11 +1,8 @@
-# 📊 Limit Order Book Simulation with Agent-Based Modelling
+# 📊 Limit Order Book Simulation with Agent-Based Modelling (RL)
 
 ## 📌 Overview
 
-This project implements an agent-based simulation of a financial market using a continuous double-auction Limit Order Book (LOB).
-
-The goal is to study how interactions between Zero-Intelligence Traders (ZIT) and Reinforcement Learning (RL) traders affect market dynamics such as volatility, price formation, and profitability. The model is designed to reproduce key stylised facts observed in real financial markets, including fat-tailed returns and volatility clustering.
-
+In this project the aim is to study the interaction between Zero-Intelligence Traders (ZIT) and Reinforcement Learning (RL) traders within an agent-based artificial financial market.The trading environment is a continuous double-auction limit order book (LOB). Using the lob_simulation.ipynb notebook, the task is to analyse how the presence and behaviour of different agent types influence market outcomes and to compare the results with stylised facts observed in real financial data.The components and structure of the artificial financial market model are described below.
 ---
 
 ## ⚙️ Model Description
@@ -241,4 +238,3 @@ $$
 
 ---
 
-## 📂 Repository Structure

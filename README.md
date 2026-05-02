@@ -33,7 +33,31 @@ $$
 Orders are matched using price-time priority.
 
 ---
-
+## ⚙️ Baseline Simulation Parameters
+| Parameter               | Description                        | Value                |
+| ----------------------- | ---------------------------------- | -------------------- |
+| $N$                     | Total number of agents             | 500                  |
+| $\omega$                | Fraction of ZIT agents             | 0.5                  |
+| $P_f$                   | Fundamental price                  | 10000                |
+| $S$                     | Private value span                 | 1000                 |
+| $\delta P$              | Tick size                          | 1                    |
+| $P_{\min}$              | Minimum price                      | $\delta P$           |
+| $P_{\max}$              | Maximum price                      | $2 \times (P_f + S)$ |
+| $t_c$                   | Order expiry horizon               | 1000                 |
+| $L$                     | Warm-start levels per side         | 200                  |
+| $D$                     | Warm-start depth per level         | 5                    |
+| $T$                     | Simulation horizon                 | 10000                |
+| $B$                     | Burn-in period                     | $0.10 \times T$      |
+| $\alpha$                | Learning rate in Q-learning        | 0.10                 |
+| $\gamma$                | Discount factor                    | 0.95                 |
+| $\epsilon_0$            | Initial exploration parameter      | 0.10                 |
+| $\kappa_{\epsilon}$     | Exploration decay factor           | 0.995                |
+| $\epsilon_{\min}$       | Minimum exploration rate (floor)   | 0.01                 |
+| $\delta_e$              | Offset for RL limit orders         | $1 \times \delta P$  |
+| $\lambda_{\text{inv}}$  | Inventory penalty                  | 0.01                 |
+| $\lambda_{\text{hold}}$ | Holding penalty                    | 0.05                 |
+| $R$                     | Number of runs with distinct seeds | 10                   |
+---
 ## 🤖 Agent Types
 
 ### 🔹 Zero-Intelligence Traders (ZIT)
@@ -208,7 +232,31 @@ At each time step:
 ---
 
 ## 3️⃣ Stylised Facts Calibration
+The following parameter set was obtained with the help of **Weights & Biases (W&B)** hyperparameter optimisation.  
+This configuration was selected because it improved the model’s ability to reproduce key stylised facts of financial markets (excess kurtosis ≈ 3, ACF of squared returns at lags 1–4 ≈ 0.20)
 
+### ⚙️ Calibrated Parameters 
+| Parameter              | Description                | Value  |
+| ---------------------- | -------------------------- | ------ |
+| $N$                    | Total number of agents     | 1000   |
+| $\omega$               | Fraction of ZIT agents     | 0.7483 |
+| $P_f$                  | Fundamental price          | 10000  |
+| $S$                    | Private value span         | 1500   |
+| $\delta P$             | Tick size                  | 1      |
+| $t_c$                  | Order expiry horizon       | 1000   |
+| $T$                    | Simulation horizon         | 20000  |
+| $L$                    | Warm-start levels per side | 100    |
+| $D$                    | Warm-start depth per level | 5      |
+| $R$                    | Number of runs             | 10     |
+| $\alpha$               | Learning rate (Q-learning) | 0.1219 |
+| $\gamma$               | Discount factor            | 0.9269 |
+| $\epsilon_0$           | Initial exploration rate   | 0.6266 |
+| $\kappa_{\epsilon}$    | Exploration decay factor   | 0.9226 |
+| $\epsilon_{\min}$      | Minimum exploration rate   | 0.0306 |
+| $\lambda_{\text{inv}}$ | Inventory penalt_          |        |
+
+
+### Outputs
 | Metric | Baseline | Calibrated |
 |--------|---------|-----------|
 | Kurtosis | 12.56 | 3.20 |

@@ -87,9 +87,9 @@ At each time step:
 
 ### 📈 Mid Price Dynamics
 
-![Mid Price ω=0.1](images/baseline_simulations/w01/actions.png)
-![Mid Price ω=0.5](images/midprice_w05.png)
-![Mid Price ω=0.9](images/midprice_w09.png)
+![Mid Price ω=0.1](baseline_simulations/w01/mid_price.png)
+![Mid Price ω=0.5](baseline_simulations/w05/mid_price.png)
+![Mid Price ω=0.9](baseline_simulations/w09/mid_price.png)
 
 - $\omega = 0.1$ → large jumps and inactivity  
 - $\omega = 0.5$ → persistent deviations from fundamental  

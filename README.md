@@ -87,7 +87,7 @@ At each time step:
 
 ### 📈 Mid Price Dynamics
 
-![Mid Price ω=0.1](images/midprice_w01.png)
+![Mid Price ω=0.1](images/baseline_simulations/w01/actions.png)
 ![Mid Price ω=0.5](images/midprice_w05.png)
 ![Mid Price ω=0.9](images/midprice_w09.png)
 

@@ -164,8 +164,6 @@ At each time step:
 
 ### Inventory Penalty ($\lambda_{inv}$)
 
-![Inventory Penalty](images/lambda_inv.png)
-
 <p align="center">
   <img src="parameters_sensetivity/lambda_inv0/inventory.png" width="500"><br>
   <em>λ<sub>inv</sub> = 0 → speculative behavior</em>
@@ -179,7 +177,14 @@ At each time step:
 
 ### Holding Penalty ($\lambda_{hold}$)
 
-![Holding Penalty](images/lambda_hold.png)
+<p align="center">
+  <img src="parameters_sensetivity/lambda_hold0/actions.png" width="500"><br>
+  <em>λ<sub>inv</sub> = 0 </em>
+</p>
+<p align="center">
+  <img src="parameters_sensetivity/lambda_hold05/actions.png" width="500"><br>
+  <em>λ<sub>inv</sub> = 5 </em>
+</p>
 
 - Higher $\lambda_{hold}$ → more trading  
 - Increases volatility  
@@ -188,10 +193,15 @@ At each time step:
 
 ### Exploration Rate ($\epsilon_0$)
 
-![Exploration Rate](images/epsilon.png)
+<p align="center">
+  <img src="parameters_sensetivity/eps0-01/pnl.png" width="500"><br>
+  <em>λ<sub>inv</sub> = 0 → stable learning </em>
+</p>
+<p align="center">
+  <img src="parameters_sensetivity/eps0-09/pnl.png" width="500"><br>
+  <em>λ<sub>inv</sub> = 0.9 → noisy and unstable PnL</em>
+</p>
 
-- $\epsilon_0 = 0.1$ → stable learning  
-- $\epsilon_0 = 0.9$ → noisy and unstable PnL  
 
 ---
 

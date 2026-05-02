@@ -87,24 +87,34 @@ At each time step:
 
 ### 📈 Mid Price Dynamics
 <p align="center">
-  <img src="baseline_simulations/w01/mid_price.png)" width="500">
+  <img src="baseline_simulations/w01/mid_price.png" width="500"><br>
+  <em>ω = 0.1 → large jumps and inactivity</em>
 </p>
-- $\omega = 0.1$ → large jumps and inactivity  
-![Mid Price ω=0.5](baseline_simulations/w05/mid_price.png)
-- $\omega = 0.5$ → persistent deviations from fundamental  
-![Mid Price ω=0.9](baseline_simulations/w09/mid_price.png)
-- $\omega = 0.9$ → noisy but mean-reverting  
-
-
-
-
+<p align="center">
+  <img src="baseline_simulations/w05/mid_price.png" width="500"><br>
+  <em>ω = 0.5 → persistent deviations from fundamental</em>
+</p>
+<p align="center">
+  <img src="baseline_simulations/w09/mid_price.png" width="500"><br>
+  <em>ω = 0.9 → noisy but mean-reverting </em>
+</p>
+ 
 ---
 
 ### ⚡ RL Action Frequencies
 
-![Actions ω=0.1](images/actions_w01.png)
-![Actions ω=0.5](images/actions_w05.png)
-![Actions ω=0.9](images/actions_w09.png)
+<p align="center">
+  <img src="baseline_simulations/w01/actions.png" width="500"><br>
+  <em>ω = 0.1 </em>
+</p>
+<p align="center">
+  <img src="baseline_simulations/w05/actions.png" width="500"><br>
+  <em>ω = 0.5 </em>
+</p>
+<p align="center">
+  <img src="baseline_simulations/w09/actions.png" width="500"><br>
+  <em>ω = 0.9 </em>
+</p>
 
 - Limit orders dominate at low $\omega$  
 - Market orders increase with higher $\omega$  
@@ -113,9 +123,18 @@ At each time step:
 
 ### 📦 Inventory Dynamics
 
-![Inventory ω=0.1](images/inventory_w01.png)
-![Inventory ω=0.5](images/inventory_w05.png)
-![Inventory ω=0.9](images/inventory_w09.png)
+<p align="center">
+  <img src="baseline_simulations/w01/inventory.png" width="500"><br>
+  <em>ω = 0.1 </em>
+</p>
+<p align="center">
+  <img src="baseline_simulations/w05/inventory.png" width="500"><br>
+  <em>ω = 0.5 </em>
+</p>
+<p align="center">
+  <img src="baseline_simulations/w09/inventory.png" width="500"><br>
+  <em>ω = 0.9 </em>
+</p>
 
 - RL inventories stay near zero when dominating  
 - Mixed market → directional strategies emerge  
@@ -125,13 +144,19 @@ At each time step:
 
 ### 💰 PnL Dynamics
 
-![PnL ω=0.1](images/pnl_w01.png)
-![PnL ω=0.5](images/pnl_w05.png)
-![PnL ω=0.9](images/pnl_w09.png)
+<p align="center">
+  <img src="baseline_simulations/w01/pnl.png" width="500"><br>
+  <em>ω = 0.1 → near zero-sum RL competition</em>
+</p>
+<p align="center">
+  <img src="baseline_simulations/w05/pnl.png" width="500"><br>
+  <em>ω = 0.5 → RL agents achieve profits</em>
+</p>
+<p align="center">
+  <img src="baseline_simulations/w09/pnl.png" width="500"><br>
+  <em>ω = 0.9 → noisy outcomes</em>
+</p>
 
-- $\omega = 0.5$ → RL agents achieve profits  
-- $\omega = 0.1$ → near zero-sum RL competition  
-- $\omega = 0.9$ → noisy outcomes  
 
 ---
 
@@ -141,8 +166,14 @@ At each time step:
 
 ![Inventory Penalty](images/lambda_inv.png)
 
-- $\lambda_{inv} = 0$ → speculative behavior  
-- $\lambda_{inv} = 5$ → market-making behavior  
+<p align="center">
+  <img src="parameters_sensetivity/lambda_inv0/inventory.png" width="500"><br>
+  <em>λ<sub>inv</sub> = 0 → speculative behavior</em>
+</p>
+<p align="center">
+  <img src="parameters_sensetivity/lambda_inv05/inventory.png" width="500"><br>
+  <em>λ<sub>inv</sub> = 5 → market-making behavior</em>
+</p>
 
 ---
 

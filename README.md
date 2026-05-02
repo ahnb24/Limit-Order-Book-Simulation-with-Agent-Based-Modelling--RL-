@@ -10,8 +10,6 @@ The objective is to study how interactions between:
 
 affect market dynamics such as volatility, price formation, and profitability.
 
-The model reproduces key stylised facts observed in real financial markets, including fat-tailed returns and volatility clustering.
-
 ---
 
 ## ⚙️ Model Description
@@ -38,38 +36,15 @@ Orders follow price-time priority.
 ### 🔹 Zero-Intelligence Traders (ZIT)
 
 - Submit random limit orders
-- Prices are drawn around a fundamental value
-- Provide liquidity to the market
+- Provide liquidity around a fundamental price
 
 ### 🔹 Reinforcement Learning Traders (RL)
 
 - Use tabular Q-learning
-- Observe best bid and best ask
-- Choose from:
-  - Market buy
-  - Market sell
-  - Limit buy
-  - Limit sell
-  - Hold
+- Learn optimal trading strategies based on PnL
 
-- Reward function:
-  R_t = ΔPnL - λ_inv * |inventory| - λ_hold * 1{hold}
-
----
-
-## 🔁 Simulation Process
-
-At each time step:
-
-1. Select an agent
-2. Observe market state
-3. Take action:
-   - ZIT → random limit order
-   - RL → ε-greedy policy
-4. Execute trades
-5. Update inventory and cash
-6. Update Q-values (RL only)
-7. Remove expired orders
+Reward function:
+R_t = ΔPnL - λ_inv * |inventory| - λ_hold * 1{hold}
 
 ---
 
@@ -77,72 +52,95 @@ At each time step:
 
 The simulation tracks:
 
-- Mid-price evolution
-- Return distribution (kurtosis)
-- Volatility clustering (ACF of squared returns)
+- Mid-price
+- Excess kurtosis of returns
+- ACF of squared returns (volatility clustering)
 - Profit & Loss (PnL)
 - Inventory dynamics
 - RL action frequencies
 
 ---
 
-## 📚 Experiments
+## 📚 Experiments & Results
 
 ### 1. Market Composition (ω)
 
-The fraction of ZIT traders (ω) is varied:
+We vary the fraction of ZIT traders (ω):
 
-- ω = 0.1 → mostly RL traders → high volatility and fat tails  
-- ω = 0.5 → mixed market → strongest volatility clustering  
-- ω = 0.9 → mostly ZIT traders → stable and near-normal behavior  
+| ω | Excess Kurtosis | ACF Lag 1 | ACF Lag 2 | ACF Lag 3 | ACF Lag 4 |
+|--|--|--|--|--|--|
+| 0.1 | 22.90 | 0.1021 | 0.0860 | 0.0028 | -0.0006 |
+| 0.5 | 12.56 | 0.2292 | 0.1180 | 0.1168 | 0.1442 |
+| 0.9 | 1.60  | 0.1760 | 0.0646 | 0.0322 | -0.0225 |
+
+**Insights:**
+- Low ω (more RL) → extreme fat tails and instability  
+- Medium ω → strongest volatility clustering  
+- High ω (more ZIT) → stable, near-normal behavior  
 
 ---
 
 ### 2. Parameter Sensitivity
 
-We analyze the effect of:
+#### Inventory Penalty (λ_inv)
 
-- Inventory penalty (λ_inv)
-- Holding penalty (λ_hold)
-- Exploration rate (ε₀)
+- λ_inv = 0 → RL agents take large directional positions (speculative behavior)
+- λ_inv = 5 → RL agents keep inventory close to zero (market-making behavior)
 
-Key insights:
+---
 
-- Higher λ_inv → more risk-averse behavior  
-- Higher λ_hold → more trading activity  
-- Higher ε₀ → unstable learning and lower profitability  
+#### Holding Penalty (λ_hold)
+
+- λ_hold = 0 → agents are passive, lower trading activity  
+- λ_hold = 5 → higher trading frequency and increased volatility  
+
+---
+
+#### Exploration Rate (ε₀)
+
+- ε₀ = 0.1 → stable learning, smoother PnL  
+- ε₀ = 0.9 → noisy learning, unstable and lower profits  
 
 ---
 
 ### 3. Stylised Facts Calibration
 
-We tune parameters to reproduce:
+| Metric | Baseline | Calibrated |
+|--|--|--|
+| Excess Kurtosis | 12.56 | 3.20 |
+| ACF Lag 1 | 0.2292 | 0.2972 |
+| ACF Lag 2 | 0.1180 | 0.1614 |
+| ACF Lag 3 | 0.1168 | 0.1710 |
+| ACF Lag 4 | 0.1442 | 0.0835 |
 
-- Fat tails in returns
-- Volatility clustering
-
-Achieved by combining:
-- High ZIT participation
-- Longer order persistence
-- Flexible RL behavior
+**Result:**  
+The calibrated model successfully reproduces:
+- Fat-tailed returns  
+- Volatility clustering  
 
 ---
 
 ### 4. RL Model Extension
 
-We modify the reward function:
+Modified reward:
 
-From:
+Original:
 λ_inv * |inventory|
 
-To:
+Modified:
 λ_inv * inventory²
 
-Result:
+| Metric | Baseline | Modified RL |
+|--|--|--|
+| Excess Kurtosis | 12.56 | 16.65 |
+| ACF Lag 1 | 0.2292 | 0.0734 |
+| ACF Lag 2 | 0.1180 | 0.0720 |
+| ACF Lag 3 | 0.1168 | 0.0306 |
+| ACF Lag 4 | 0.1442 | 0.1023 |
 
-- More extreme price movements  
-- Reduced liquidity provision  
-- Higher return kurtosis  
+**Insight:**
+- Higher kurtosis → more extreme price movements  
+- Lower ACF → reduced volatility persistence  
 
 ---
 

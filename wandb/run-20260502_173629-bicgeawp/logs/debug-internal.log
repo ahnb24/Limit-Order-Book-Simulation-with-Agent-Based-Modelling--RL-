@@ -1,0 +1,12 @@
+{"time":"2026-05-02T17:36:29.87250352+01:00","level":"INFO","msg":"stream: starting","core version":"0.25.0"}
+{"time":"2026-05-02T17:36:30.433989105+01:00","level":"INFO","msg":"stream: created new stream","id":"bicgeawp"}
+{"time":"2026-05-02T17:36:30.434111544+01:00","level":"INFO","msg":"handler: started","stream_id":"bicgeawp"}
+{"time":"2026-05-02T17:36:30.434332143+01:00","level":"INFO","msg":"stream: started","id":"bicgeawp"}
+{"time":"2026-05-02T17:36:30.434386353+01:00","level":"INFO","msg":"writer: started","stream_id":"bicgeawp"}
+{"time":"2026-05-02T17:36:30.434389973+01:00","level":"INFO","msg":"sender: started","stream_id":"bicgeawp"}
+{"time":"2026-05-02T17:37:34.341771974+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-05-02T17:37:34.58479824+01:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-05-02T17:37:34.594291451+01:00","level":"INFO","msg":"stream: closing","id":"bicgeawp"}
+{"time":"2026-05-02T17:37:34.594317281+01:00","level":"INFO","msg":"handler: closed","stream_id":"bicgeawp"}
+{"time":"2026-05-02T17:37:34.594391921+01:00","level":"INFO","msg":"sender: closed","stream_id":"bicgeawp"}
+{"time":"2026-05-02T17:37:34.594405111+01:00","level":"INFO","msg":"stream: closed","id":"bicgeawp"}

@@ -1,0 +1,5 @@
+Excess kurtosis: 22.904594433836184
+ACF squared returns lag 1: 0.1021
+ACF squared returns lag 2: 0.0860
+ACF squared returns lag 3: 0.0028
+ACF squared returns lag 4: -0.0006

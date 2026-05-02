@@ -1,0 +1,38 @@
+wandb_version: 1
+
+ALPHA:
+  value: 0.11487301574371316
+D:
+  value: 5
+EPS0:
+  value: 0.2654255092468958
+EPS_DECAY:
+  value: 0.9259213578857896
+EPS_MIN:
+  value: 0.012684354822685864
+GAMMA:
+  value: 0.7541707081368644
+L:
+  value: 300
+LAMBDA_HOLD:
+  value: 0.3893292127694724
+LAMBDA_INV:
+  value: 0.5042615945013719
+N:
+  value: 500
+Pf:
+  value: 10000
+R:
+  value: 5
+S:
+  value: 500
+TE:
+  value: 15000
+deltaP:
+  value: 1
+save_path:
+  value: null
+tc:
+  value: 1000
+w:
+  value: 0.2146622022154837

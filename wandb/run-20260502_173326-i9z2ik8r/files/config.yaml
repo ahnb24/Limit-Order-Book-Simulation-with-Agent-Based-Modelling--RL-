@@ -1,0 +1,72 @@
+_wandb:
+    value:
+        cli_version: 0.25.0
+        e:
+            64ovcioxmhqyunnh37jz6xpp5sk52flp:
+                codePath: /home/amirhessam/Uni/Term 1/ABM/lob/lob_simulation.ipynb
+                codePathLocal: lob_simulation.ipynb
+                cpu_count: 24
+                cpu_count_logical: 48
+                disk:
+                    /:
+                        total: "1966736678912"
+                        used: "35893153792"
+                email: ahnb24@gmail.com
+                executable: /usr/local/bin/python3.10
+                host: amirhessam
+                memory:
+                    total: "67374432256"
+                os: Linux-6.17.0-20-generic-x86_64-with-glibc2.39
+                program: /home/amirhessam/Uni/Term 1/ABM/lob/lob_simulation.ipynb
+                python: CPython 3.10.11
+                root: /home/amirhessam/Uni/Term 1/ABM/lob
+                startedAt: "2026-05-02T16:33:26.158205Z"
+                writerId: 64ovcioxmhqyunnh37jz6xpp5sk52flp
+        m: []
+        python_version: 3.10.11
+        t:
+            "3":
+                - 2
+                - 14
+            "4": 3.10.11
+            "5": 0.25.0
+            "8":
+                - 1
+            "12": 0.25.0
+            "13": linux-x86_64
+ALPHA:
+    value: 0.10745746719231145
+D:
+    value: 10
+EPS_DECAY:
+    value: 0.9087025292468796
+EPS_MIN:
+    value: 0.09150293612400816
+EPS0:
+    value: 0.9571680247959188
+GAMMA:
+    value: 0.9539952204848364
+L:
+    value: 100
+LAMBDA_HOLD:
+    value: 0.00958005639572422
+LAMBDA_INV:
+    value: 0.0024114231420965583
+"N":
+    value: 1000
+Pf:
+    value: 10000
+R:
+    value: 5
+S:
+    value: 1500
+TE:
+    value: 15000
+deltaP:
+    value: 1
+save_path:
+    value: null
+tc:
+    value: 2000
+w:
+    value: 0.6333291496583857

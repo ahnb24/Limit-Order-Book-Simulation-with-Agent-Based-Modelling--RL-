@@ -1,6 +1,0 @@
-{"time":"2026-05-02T17:40:38.018248436+01:00","level":"INFO","msg":"stream: starting","core version":"0.25.0"}
-{"time":"2026-05-02T17:40:38.515609701+01:00","level":"INFO","msg":"stream: created new stream","id":"umqnn4ub"}
-{"time":"2026-05-02T17:40:38.51571124+01:00","level":"INFO","msg":"handler: started","stream_id":"umqnn4ub"}
-{"time":"2026-05-02T17:40:38.515906749+01:00","level":"INFO","msg":"stream: started","id":"umqnn4ub"}
-{"time":"2026-05-02T17:40:38.515940269+01:00","level":"INFO","msg":"writer: started","stream_id":"umqnn4ub"}
-{"time":"2026-05-02T17:40:38.515945079+01:00","level":"INFO","msg":"sender: started","stream_id":"umqnn4ub"}

@@ -2,8 +2,13 @@
 
 ## 📌 Overview
 
-In this project the aim is to study the interaction between Zero-Intelligence Traders (ZIT) and Reinforcement Learning (RL) traders within an agent-based artificial financial market.The trading environment is a continuous double-auction limit order book (LOB). Using the lob_simulation.ipynb notebook, the task is to analyse how the presence and behaviour of different agent types influence market outcomes and to compare the results with stylised facts observed in real financial data.The components and structure of the artificial financial market model are described below.
----
+In this project, the aim is to study the interaction between Zero-Intelligence Traders (ZIT) and Reinforcement Learning (RL) traders within an agent-based artificial financial market.
+
+The trading environment is a continuous double-auction limit order book (LOB).
+
+Using the `lob_simulation.ipynb` notebook, the task is to analyse how the presence and behaviour of different agent types influence market outcomes and to compare the results with stylised facts observed in real financial data.
+
+The components and structure of the artificial financial market model are described below.
 
 ## ⚙️ Model Description
 
